@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="allstyle.css">
+  <script src="https://kit.fontawesome.com/85e5aa050d.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<body>
+
+  <nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn"><i class="fas fa-bars"></i></label>
+    <ul class="navb">
+      <li><a href="#invitationa">Einladung</a></li>
+      <li><a href="#countdowna">Countdown</a></li>
+      <li><a href="#timelinea">Timeline</a></li>
+      <li><a href="#locationsa">Locations</a></li>
+      <li><a href="#feedbacka">Rueckmeldung</a></li>
+    </ul>
+
+  </nav>
+  <section class="welcome">
+    <!-- <span id="anka">Ann-Katrin</span>
+      <span class="far fa-heart" id="hertz"></span>
+      <span id="jakob">Jakob</span> -->
+    <div class="AuJ"><span>Ann-Katrin</span><br><span>& Jakob</span></div>
+  </section>
+
+
+  <section class="invitation" id="invitationa">
+    <div class="container">
+
+    </div>
+  </section>
+  <section class="countdown" id="countdowna">
+    <div class="header">
+      countdown
+    </div>
+    <div class="container">
+
+      <div class="seperator"></div>
+
+      <div id="clockdiv">
+        <div>
+          <span class="days"></span>
+          <div class="smalltext">Tage</div>
+        </div>
+        <div>
+          <span class="hours"></span>
+          <div class="smalltext">Stunden</div>
+        </div>
+        <div>
+          <span class="minutes"></span>
+          <div class="smalltext">Minuten</div>
+        </div>
+        <div>
+          <span class="seconds"></span>
+          <div class="smalltext">Sekunden</div>
+        </div>
+      </div>
+
+      <div class="seperator"></div>
+
+    </div>
+  </section>
+  <section class="timeline" id="timelinea">
+    <div class="header">timeline</div>
+    <div class="container">
+
+    </div>
+  </section>
+
+  <section class="locations" id="locationsa">
+    <div class="header">locations</div>
+    <div class="container">
+
+      <div class="seperator"></div>
+
+      <div class="locationss">
+        <h1>Trauung</h1>
+        <div class="location locationone">
+          <a href="https://goo.gl/maps/4UDojqQDDUu271Hz7" target="_blank">
+            <div class="map">
+            </div>
+          </a>
+          <div class="adress">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere ut sapiente saepe eum
+            omnis. Quod excepturi illo aliquam tenetur. Fugit debitis cum corrupti, iure consequatur quis eveniet alias
+            amet numquam.</div>
+        </div>
+        <div class="seperator"></div>
+        <h1>Festlichkeit</h1>
+        <div class="location locationtwo">
+          <div class="adress">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt, laudantium illum. Et
+            rem expedita nobis iure mollitia eum maiores cum est blanditiis eius? Sequi doloribus soluta nostrum
+            quibusdam delectus ipsam?</div>
+          <a href="https://goo.gl/maps/BdrBijGwWrLPNfQR9" target="_blank">
+            <div class="map">
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="seperator"></div>
+
+    </div>
+  </section>
+
+  <section class="feedback" id="feedbacka">
+    <div class="header">Rueckmeldung</div>
+    <div class="feedformdiv">
+      <form action="/insert_data" method="POST">
+        <br>
+        <label class="item1">
+          Ich/Wir nehme/nehmen teil
+          <input type="radio" name="ichnehmeteil" id="ichnehmeteil">
+        </label>
+        <br>
+        <label class="item2">
+          Ich/Wir nehme/nehmen nicht teil
+          <input type="radio" name="ichnehmeteil" id="ichnehmenichtteil">
+        </label>
+        <br>
+
+        <label class="item3">
+          Vorname:
+          <br>
+          <input type="text" id="fname" name="firstname">
+        </label>
+        <br>
+
+        <label class="item4">
+          Nachname:
+          <br>
+          <input type="text" id="lname" name="lastname">
+        </label>
+        <br>
+
+        <!-- <label class="item5">Email:
+            <br>
+            <input type="email" id="email" name="email">
+          </label> -->
+
+        <label class="item6">Wir kommen zu:
+          <br>
+          <input type="number" id="anzahl" name="anzahl">
+        </label>
+        <input id="sendbtn" type="submit" value="Abschicken">
+      </form>
+    </div>
+  </section>
+  <script src="script.js"></script>
+</body>
+
+</html>

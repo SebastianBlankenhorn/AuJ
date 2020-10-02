@@ -1,0 +1,347 @@
+*{
+padding: 0;
+margin: 0;
+text-decoration: none;
+list-style: none;
+box-sizing: border-box;
+font-family: 'Caveat', cursive;
+}
+:root{
+    font-size: 10px;
+    --lightgreen: #658b62;
+    --darkgreen: #315343;
+    --darkbrown: #584d2f;
+    --brown: #deb887;
+    --lightbrown: #b89555;
+    --fontcol: #8b5900;
+    background-color: bisque;
+}
+
+/* Scrollbar */
+body::-webkit-scrollbar{
+    width: 0.7rem;
+}
+body::-webkit-scrollbar-track{
+    background: rgb(255, 228, 196);
+}
+body::-webkit-scrollbar-thumb{
+    background:rgb(46, 39, 23);
+}
+
+/* navigation */
+nav{
+    z-index: 100;
+    position: sticky;
+    top: 0;
+    background-color:var(--darkgreen);
+    height: 4rem;
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.507);
+}
+nav ul{
+    height: inherit;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+nav ul li{
+    display: inline-block;
+}
+nav ul li a{
+    display: block;
+    font-size: 2rem;
+    text-decoration: none;
+    color: white;
+}
+nav ul li a:hover{
+    border-bottom: 3px solid #e61;
+}
+
+.checkbtn{
+    cursor: pointer;
+    float: right;
+    font-size: 3rem;
+    margin: .5rem;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+@media (max-width: 450px){
+    .checkbtn{
+        display: block;
+    }
+    nav ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 4rem;
+        left: -100%;
+        text-align: center;
+        flex-direction: column;
+        justify-content: flex-start;
+        transition: all 0.5s;
+    }
+    nav ul li{
+        display: block;
+        width: 100%;
+    }
+    nav{
+        position: fixed;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+    }
+    
+  #check:checked ~ ul{
+    left: 0;
+  }
+    
+
+}
+/* /navigation */
+.header{
+    background-color: var(--lightgreen);
+    color:white;
+    text-align: center;
+    font-size: 7rem;
+    padding: 1rem 0 3rem 0;
+}
+
+.container{
+    background-color: inherit;
+    width: 100%;
+    text-align: center;
+    padding: 3rem 0 6rem 0;
+}
+
+.welcome{
+    background: url(./welcomepic.jpg) center no-repeat fixed;
+    height: 80vh;
+    background-size: cover;
+    position: relative;
+}
+.AuJ{
+    text-align: center;
+    font-size: 10rem;
+    color: var(--lightbrown);
+}
+#anka{
+    position: sticky;
+    top: 0;
+    font-size: 10rem;
+    color: var(--lightbrown);
+    margin-left: 15vw;
+    margin-top: 25vh;
+    display: block;
+    float: left;
+}
+#hertz{
+    position: sticky;
+    top: 0;
+    margin-top: 10vh;
+    font-size: 10rem;
+    color: var(--lightbrown);
+    margin-left: 12vw;
+}
+#jakob{
+    position: sticky;
+    top: 0;
+    font-size:10rem;
+    color: var(--lightbrown);
+    margin-right: 15vw;
+    margin-top: 25vh;
+    display: block;
+    float: right;
+}
+
+.invitation .container{
+    background-color: bisque;
+    height: 40vh;
+}
+/* .invitation::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 320px;
+    background: url(./waveup.svg) center no-repeat;
+    background-size: cover;
+} */
+
+.countdown .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.countdown .container .seperator {
+    height: 2px;
+    width: 45vw;
+    background-color: #315343;
+}
+
+.countdown .container #clockdiv{
+    display: flex;
+    flex-direction: row;
+    width: 40vw;
+    justify-content: space-between;
+}
+.countdown .container #clockdiv div{
+    display: flex;
+    flex-direction: column;
+    
+    font-size: 4rem;
+}
+
+.timeline{
+    background-color: #f5fffa;
+    height: 60vh;
+}
+.locations .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.locations .container .seperator{
+    background-color: #315343;
+    width: 5px;
+}.locations .container .seperator{
+    background-color: #315343;
+    width: 5px;
+}
+.locations .container h1{
+    margin-top: 5rem;
+    font-size: 6rem;
+    text-decoration: none;
+}
+.locations .container .locationss .seperator{
+    
+    height: 2px;
+    width: 90rem;
+}
+.locations .container .locationss .location{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+.locations .container .locationss .location .map{
+    background-color: #584d2f;
+    width: 30rem;
+    height: 30rem;
+}
+.locations .container .locationss .location .adress{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 3rem;
+    width: 50rem;
+    height: 30rem;
+}
+.locations .container .locationone .map{
+    background: url(./kirchepic.png) center no-repeat;
+}
+.locations .container .locationone .adress{
+    -webkit-box-shadow: 10px -10px 2px -3px rgba(77,99,66,1);
+    -moz-box-shadow: 10px -10px 2px -3px rgba(77,99,66,1);
+    box-shadow: 10px -10px 2px -3px rgba(77,99,66,1);
+}
+.locations .container .locationtwo .map{
+    background: url(./festpic.png) center no-repeat;
+}.locations .container .locationtwo .adress{
+    -webkit-box-shadow: -10px 10px 2px -3px rgba(77,99,66,1);
+    -moz-box-shadow: -10px 10px 2px -3px rgba(77,99,66,1);
+    box-shadow: -10px 10px 2px -3px rgba(77,99,66,1);
+
+}
+.feedback{
+    background-color: bisque;
+    height: 70vh;
+}
+
+/*  Anmeldeformular_div----------------------------------------------------*/
+
+form{
+    background-color: inherit;
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    gap: 15px;
+}
+
+.item1{
+    grid-column: 2;
+}
+.item2{
+    grid-column: 3;
+    grid-row: 1;
+}
+.item3{
+    grid-column: 2 / span 2;
+}
+.item4{
+    grid-column: 2 / span 2;
+}
+.item6{
+    grid-column: 2 / span 2;
+}
+#sendbtn{
+    grid-column: 2 / span 2;
+    align-self: center;
+    justify-self: center;
+}
+
+label{
+    font-size: 16pt;
+    text-align: center;
+}
+input[type=text]{
+    height: 35px;
+    width: 50%;
+    box-sizing: border-box;
+    border: 3px solid rgb(53, 53, 42);
+    outline: none;
+    font-size: 20px;
+}
+input[type=email]{
+    box-sizing: border-box;
+    border: 3px solid rgb(53, 53, 42);
+    outline: none;
+}
+input[type=number]{
+    height: 35px;
+    box-sizing: border-box;
+    border: 3px solid rgb(53, 53, 42);
+    outline: none;
+    font-size: 20px;
+}
+input[type=text]:focus {
+    border: 3px solid rgb(231, 225, 225);
+}
+input[type=email]:focus {
+    border: 3px solid rgb(231, 225, 225);
+}input[type=number]:focus {
+    border: 3px solid rgb(231, 225, 225);
+    
+}
+input[type=submit]{
+    align-self: center;
+    justify-self: center;
+    display: block;
+    font-size: 16pt;
+    text-align: center;
+    width: 20%;
+    padding: 12px 20px;
+    margin: 8px 0px;
+    box-sizing: border-box;
+    border: 3px solid rgb(53, 53, 42);
+    outline: none;
+}input[type=submit]:hover{
+    background-color: #e61;
+}input[type=submit]:active{
+    border-color:rgb(231, 225, 225) ;
+}
+  /* /Anmeldeformular----------------------------------------------------*/
