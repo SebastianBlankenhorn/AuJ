@@ -5,40 +5,44 @@
   <link rel="stylesheet" type="text/css" href="allstyle.css">
   <script src="https://kit.fontawesome.com/85e5aa050d.js" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet">
 </head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <body>
 
+  <section class="welcome">
+    <div class="header">
+      <div class="AuJ">
+        <span id="anka">Ann-Kathrin </span>
+        <span class="far fa-heart " id="hertz"></span>
+        <span id="jakob"> Jakob</span></div>
+    </div>
+    </div>
+    <div class="title">
+      <span id="anka">Ann-Kathrin </span>
+      <span class="far fa-heart " id="hertz"></span>
+      <span id="jakob"> Jakob</span></div>
+  </section>
+
   <nav>
     <input type="checkbox" id="check">
     <label for="check" class="checkbtn"><i class="fas fa-bars"></i></label>
     <ul class="navb">
-      <li><a href="#invitationa">Einladung</a></li>
-      <li><a href="#countdowna">Countdown</a></li>
-      <li><a href="#timelinea">Timeline</a></li>
+      <li><a href="#timelinea">Tagesablauf</a></li>
       <li><a href="#locationsa">Locations</a></li>
-      <li><a href="#feedbacka">Rueckmeldung</a></li>
+      <li><a href="#feedbacka">Anmeldung</a></li>
+      <li><a href="#feedbacka">Organisatorisches</a></li>
+      <li><a href="#feedbacka">Geschenk</a></li>
+      <li><a href="#feedbacka">Fotos</a></li>
+      <li><a href="#feedbacka">Kontakt</a></li>
     </ul>
-
   </nav>
-  <section class="welcome">
-    <!-- <span id="anka">Ann-Katrin</span>
-      <span class="far fa-heart" id="hertz"></span>
-      <span id="jakob">Jakob</span> -->
-    <div class="AuJ"><span>Ann-Katrin</span><br><span>& Jakob</span></div>
-  </section>
 
-
-  <section class="invitation" id="invitationa">
-    <div class="container">
-
-    </div>
-  </section>
   <section class="countdown" id="countdowna">
-    <div class="header">
+    <!-- <div class="header">
       countdown
-    </div>
+    </div> -->
     <div class="container">
 
       <div class="seperator"></div>
@@ -66,10 +70,50 @@
 
     </div>
   </section>
+
   <section class="timeline" id="timelinea">
-    <div class="header">timeline</div>
+    <div class="header">Tagesablauf</div>
+
     <div class="container">
 
+      <div class="ablauf">
+        <div class="left">16:00 Trauung</div>
+        <div class="icon"><i class="fas fa-church"></i></div>
+        <div></div>
+        <div></div>
+        <div class="linecontainer">
+          <div class="line"></div>
+        </div>
+        <div></div>
+        <div></div>
+        <div class="icon"><i class="fas fa-glass-cheers"></i></div>
+        <div class="right">Staenderling</div>
+        <div></div>
+        <div class="linecontainer">
+          <div class="line"></div>
+        </div>
+        <div></div>
+        <div class="left">16:30 Autokorso</div>
+        <div class="icon"><i class="fas fa-car-side"></i></div>
+        <dir></dir>
+        <div></div>
+        <div class="linecontainer">
+          <div class="line"></div>
+        </div>
+        <div></div>
+        <div></div>
+        <div class="icon"><i class="fas fa-camera"></i></div>
+        <div class="right">Ankommen & Fotoshooting</div>
+        <div></div>
+        <div class="linecontainer">
+          <div class="line"></div>
+        </div>
+        <div></div>
+        <div class="left">18:30 Die grosse Feier</div>
+        <div class="icon"><i class="fas fa-birthday-cake"></i></div>
+        <div></div>
+      </div>
+      <div class="tlbild"></div>
     </div>
   </section>
 
@@ -107,48 +151,84 @@
 
     </div>
   </section>
-
+  <div class="location-feedback-bild"></div>
   <section class="feedback" id="feedbacka">
-    <div class="header">Rueckmeldung</div>
+    <div class="header">Anmeldung</div>
     <div class="feedformdiv">
+      
       <form action="/insert_data" method="POST">
-        <br>
-        <label class="item1">
-          Ich/Wir nehme/nehmen teil
-          <input type="radio" name="ichnehmeteil" id="ichnehmeteil">
-        </label>
-        <br>
-        <label class="item2">
-          Ich/Wir nehme/nehmen nicht teil
-          <input type="radio" name="ichnehmeteil" id="ichnehmenichtteil">
-        </label>
-        <br>
 
-        <label class="item3">
-          Vorname:
-          <br>
-          <input type="text" id="fname" name="firstname">
-        </label>
-        <br>
+        <div class="line-l"><div></div></div>
+        <div class="line-r"><div></div></div>
 
-        <label class="item4">
-          Nachname:
-          <br>
-          <input type="text" id="lname" name="lastname">
-        </label>
-        <br>
+        <div class="zusage-C sage-C">
+          <input type="radio" name="ichnehmeteil" id="zusage" checked="checked">
+          <label for="zusage" class="item1">Zusage</label>
+        </div>
+        <div class="absage-C sage-C">
+          <input type="radio" name="ichnehmeteil" id="absage">
+          <label for="absage" class="item2">Absage</label>
+        </div>
 
-        <!-- <label class="item5">Email:
-            <br>
-            <input type="email" id="email" name="email">
-          </label> -->
 
-        <label class="item6">Wir kommen zu:
-          <br>
-          <input type="number" id="anzahl" name="anzahl">
+        <label class="teilnehmer" id="teilnehmer1">Gast 1<br>
+          <input type="text" name="teilnehmerone">
         </label>
-        <input id="sendbtn" type="submit" value="Abschicken">
+        <label class="teilnehmer" id="teilnehmer2">Gast 2<br>
+          <input type="text" name="teilnehmertwo"><i class="far fa-times-circle" id="deleteguest2"></i>
+        </label>
+        <label class="teilnehmer" id="teilnehmer3">Gast 3<br>
+          <input type="text" name="teilnehmerthree"><i class="far fa-times-circle" id="deleteguest3"></i>
+        </label>
+        <label class="teilnehmer" id="teilnehmer4">Gast 4<br>
+          <input type="text" name="teilnehmerfour"><i class="far fa-times-circle" id="deleteguest4"></i>
+        </label>
+        <label class="teilnehmer" id="teilnehmer5">Gast 5<br>
+          <input type="text" name="teilnehmerfive"><i class="far fa-times-circle" id="deleteguest5"></i>
+        </label>
+        <label class="teilnehmer" id="teilnehmer6">Gast 6<br>
+          <input type="text" name="teilnehmersix"><i class="far fa-times-circle" id="deleteguest6"></i>
+        </label>
+        <label class="teilnehmer" id="teilnehmer7">Gast 7<br>
+          <input type="text" name="teilnehmerseven"><i class="far fa-times-circle" id="deleteguest7"></i>
+        </label>
+        <label class="teilnehmer" id="teilnehmer8">Gast 8<br>
+          <input type="text" name="teilnehmereight"><i class="far fa-times-circle" id="deleteguest8"></i>
+        </label>
+        <label class="teilnehmer" id="teilnehmer9">Gast 9<br>
+          <input type="text" name="teilnehmernine"><i class="far fa-times-circle" id="deleteguest9"></i>
+        </label>
+        <div class="gasthinz"><i id="gastadd"><i class="fas fa-plus-circle"></i> Weiteren Gast hinzufügen</i> </div>
+        
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <input id="sendbtn" type="submit" value="Abschicken">
+          </div>
+        </div>
       </form>
+      <button id="myBtn">Abschicken</button>
+    </div>
+  </section>
+
+  <section class="" id="">
+    <div class="header">Organisatorisches</div>
+    <div class="container">
+
+    </div>
+  </section>
+
+  <section class="" id="">
+    <div class="header">Geschenk</div>
+    <div class="container">
+
+    </div>
+  </section>
+
+  <section class="" id="">
+    <div class="header">Kontakt</div>
+    <div class="container">
+
     </div>
   </section>
   <script src="script.js"></script>

@@ -4,7 +4,7 @@ margin: 0;
 text-decoration: none;
 list-style: none;
 box-sizing: border-box;
-font-family: 'Caveat', cursive;
+font-family: 'Caveat', cursive; 
 }
 :root{
     font-size: 10px;
@@ -30,7 +30,7 @@ body::-webkit-scrollbar-thumb{
 
 /* navigation */
 nav{
-    z-index: 100;
+    z-index: 99;
     position: sticky;
     top: 0;
     background-color:var(--darkgreen);
@@ -115,45 +115,30 @@ nav ul li a:hover{
     padding: 3rem 0 6rem 0;
 }
 
-.welcome{
+.welcome .header{
     background: url(./welcomepic.jpg) center no-repeat fixed;
     height: 80vh;
     background-size: cover;
     position: relative;
 }
-.AuJ{
+
+.title{
     text-align: center;
-    font-size: 10rem;
-    color: var(--lightbrown);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
-#anka{
-    position: sticky;
-    top: 0;
-    font-size: 10rem;
-    color: var(--lightbrown);
-    margin-left: 15vw;
-    margin-top: 25vh;
-    display: block;
-    float: left;
+
+.AuJ{
+    position: absolute;
+    text-align: center;
+    font-size: 7rem;
+    background-color:rgba(0, 0, 0, 0);
+    width: 100%;
+    bottom: 15vh;
+    right: 20vw;
 }
-#hertz{
-    position: sticky;
-    top: 0;
-    margin-top: 10vh;
-    font-size: 10rem;
-    color: var(--lightbrown);
-    margin-left: 12vw;
-}
-#jakob{
-    position: sticky;
-    top: 0;
-    font-size:10rem;
-    color: var(--lightbrown);
-    margin-right: 15vw;
-    margin-top: 25vh;
-    display: block;
-    float: right;
-}
+
 
 .invitation .container{
     background-color: bisque;
@@ -174,6 +159,7 @@ nav ul li a:hover{
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-size: 4rem;
 }
 
 .countdown .container .seperator {
@@ -191,18 +177,75 @@ nav ul li a:hover{
 .countdown .container #clockdiv div{
     display: flex;
     flex-direction: column;
-    
     font-size: 4rem;
 }
 
 .timeline{
     background-color: #f5fffa;
-    height: 60vh;
 }
+.timeline .container{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    height: 80vh;
+    padding: 0rem 0 0rem 0;
+    background-color: bisque;
+}
+.timeline .container .ablauf{
+    
+    padding: 3rem 0 6rem 0;
+    display: grid;
+    grid-template-columns: 1fr 100px 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 10px 0px;
+    grid-template-areas:
+      ". . ."
+      ". . ."
+      ". . ."
+      ". . ."
+      ". . ."
+      ". . ."
+      ". . ."
+      ". . ."
+      ". . .";
+      font-size: 4rem;
+}
+.timeline .container .ablauf .right{
+    text-align: left;
+    align-self: center;
+}
+.timeline .container .ablauf .left{
+    text-align: right;
+    align-self: center;
+}
+.timeline .container .ablauf .icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.timeline .container .tlbild{
+    background: url(./tlright.jpg) no-repeat ;
+    background-size: cover;
+    box-shadow: -8px 0px 8px -8px rgba(0, 0, 0, 0.226), -20px 0px 20px -20px rgba(0, 0, 0, 0.507);
+}
+.timeline .container .linecontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+.timeline .container .line{
+    width: 2px;
+    height: 100%;
+    background-color:var(--darkgreen) ;
+}
+
+
+
 .locations .container{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.568), 0 10px 10px 0 rgba(0, 0, 0, 0.301);
+    z-index: 90;
 }
 .locations .container .seperator{
     background-color: #315343;
@@ -241,57 +284,208 @@ nav ul li a:hover{
     width: 50rem;
     height: 30rem;
 }
+
 .locations .container .locationone .map{
-    background: url(./kirchepic.png) center no-repeat;
+    background: url(./kircheloc.jpg) center no-repeat;
+    background-size: contain;
+    border-radius: 50%;
+    border: 3px solid #f5fffa;
 }
 .locations .container .locationone .adress{
-    -webkit-box-shadow: 10px -10px 2px -3px rgba(77,99,66,1);
-    -moz-box-shadow: 10px -10px 2px -3px rgba(77,99,66,1);
-    box-shadow: 10px -10px 2px -3px rgba(77,99,66,1);
+    box-shadow: 5px -5px 2px -3px rgba(77, 99, 66, 0.459), 10px -10px 2px -3px rgba(77, 99, 66, 0.178);
 }
 .locations .container .locationtwo .map{
-    background: url(./festpic.png) center no-repeat;
-}.locations .container .locationtwo .adress{
-    -webkit-box-shadow: -10px 10px 2px -3px rgba(77,99,66,1);
-    -moz-box-shadow: -10px 10px 2px -3px rgba(77,99,66,1);
-    box-shadow: -10px 10px 2px -3px rgba(77,99,66,1);
+    background: url(./festloc.jpg) center no-repeat;
+    background-size: contain;
+    border-radius: 50%;
+    border: 3px solid #f5fffa;
+}
 
+
+.locations .container .locationtwo .adress{
+    /* -webkit-box-shadow: -10px 10px 2px -3px rgba(77,99,66,1);
+    -moz-box-shadow: -10px 10px 2px -3px rgba(77,99,66,1);*/
+    box-shadow: -5px 5px 2px -3px rgba(77, 99, 66, 0.459), -10px 10px 2px -3px rgba(77, 99, 66, 0.178);
 }
-.feedback{
-    background-color: bisque;
+
+.location-feedback-bild{
+    background: url(./locfeedbild.jpg) center no-repeat fixed;
     height: 70vh;
+    background-size: cover;
 }
+
+
 
 /*  Anmeldeformular_div----------------------------------------------------*/
+
+.feedback{
+    background-color: bisque;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+}
 
 form{
     background-color: inherit;
     padding-top: 20px;
     display: grid;
-    grid-template-columns: 1fr 2fr 2fr 1fr;
-    gap: 15px;
+    grid-template-columns: 1fr 10px 1fr 1fr 1fr 1fr 10px 1fr;
+    gap: 15px 3px;
+    
 }
 
-.item1{
-    grid-column: 2;
+.feedback .line-l{
+    grid-row: 1 / 13;
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
-.item2{
-    grid-column: 3;
+.feedback .line-l div{
+    height: 100%;
+    width: 4px;
+    background-color: var(--darkgreen);
+}
+.feedback .line-r{
+    grid-row: 1 / 13;
+    grid-column: 8;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.feedback .line-r div{
+    height: 100%;
+    width: 4px;
+    background-color: var(--darkgreen);
+}
+
+
+
+.zusage-C{
+    grid-column: 4;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+.absage-C{
+    grid-column: 5;
     grid-row: 1;
+    font-family: 'Noto Sans JP', sans-serif;
 }
-.item3{
-    grid-column: 2 / span 2;
-}
-.item4{
-    grid-column: 2 / span 2;
-}
-.item6{
-    grid-column: 2 / span 2;
-}
-#sendbtn{
-    grid-column: 2 / span 2;
+
+#myBtn{
     align-self: center;
     justify-self: center;
+    display: block;
+    font-size: 16pt;
+    text-align: center;
+    width: 10%;
+    margin: auto;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 3px solid rgb(53, 53, 42);
+    outline: none;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+#myBtn:hover{
+    background-color:var(--darkgreen);
+    color: #f5fffa;
+    cursor: pointer;
+}
+
+#sendbtn{
+    display: none;
+    z-index: 100;
+    margin: 35% auto; /* 15% from the top and centered */
+    width: 20%;
+    padding: 5px;
+}
+
+.numbers{
+    grid-column: 2 / span 2;
+    display: flex;
+    justify-content: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  align-items: center;
+  font-size: 4rem;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+.sage-C{display: flex;
+    justify-content: center;
+}
+.sage-C label{
+    display: block;
+    box-sizing: border-box;
+    width: 50%;
+    cursor: pointer;
+    font-size: 3.5rem;
+    font-family: 'Noto Sans JP', sans-serif;
+    border-bottom: 4px solid bisque;
+}.zusage-C label:hover{
+    border-bottom: 4px solid var(--lightgreen);
+}
+.zusage-C input:checked + label{
+    border-bottom: 4px solid var(--lightgreen);
+}
+.absage-C label:hover{
+    border-bottom: 4px solid rgb(177, 73, 47);
+}
+.absage-C input:checked + label{
+    border-bottom: 4px solid rgb(177, 73, 47);
+}
+.sage-C input{
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.teilnehmer{
+    grid-column: 4 / span 2;
+    text-align: left;
+    font-size: 1.5rem;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+#teilnehmer1{
+    display: inline;
+}#teilnehmer2{
+    display: none;
+}#teilnehmer3{
+    display: none;
+}#teilnehmer4{
+    display: none;
+}#teilnehmer5{
+    display: none;
+}#teilnehmer6{
+    display: none;
+}#teilnehmer7{
+    display: none;
+}#teilnehmer8{
+    display: none;
+}#teilnehmer9{
+    display: none;
+}
+
+.fa-times-circle{
+    margin-left: 1.5rem;
+    font-size: 2.5rem;
+}
+.fa-times-circle:hover{
+    cursor: pointer;
+    color: var(--lightgreen);
+}
+.gasthinz{
+    box-sizing: border-box;
+    grid-column: 4;
+    font-size: 1.5rem;
+}
+.gasthinz > i{
+    font-family: 'Noto Sans JP', sans-serif;
+}
+.gasthinz :hover{
+    cursor: pointer;
+    border-bottom: 2px solid rgb(53, 53, 42);
 }
 
 label{
@@ -300,32 +494,17 @@ label{
 }
 input[type=text]{
     height: 35px;
-    width: 50%;
+    width: 90%;
     box-sizing: border-box;
-    border: 3px solid rgb(53, 53, 42);
+    border: none;
+    border-bottom: 3px solid rgb(53, 53, 42); 
     outline: none;
     font-size: 20px;
-}
-input[type=email]{
-    box-sizing: border-box;
-    border: 3px solid rgb(53, 53, 42);
-    outline: none;
-}
-input[type=number]{
-    height: 35px;
-    box-sizing: border-box;
-    border: 3px solid rgb(53, 53, 42);
-    outline: none;
-    font-size: 20px;
+    font-family: 'Noto Sans JP', sans-serif;
 }
 input[type=text]:focus {
-    border: 3px solid rgb(231, 225, 225);
-}
-input[type=email]:focus {
-    border: 3px solid rgb(231, 225, 225);
-}input[type=number]:focus {
-    border: 3px solid rgb(231, 225, 225);
-    
+    border: none;
+    border-bottom: 3px solid rgb(167, 209, 202);
 }
 input[type=submit]{
     align-self: center;
@@ -333,15 +512,52 @@ input[type=submit]{
     display: block;
     font-size: 16pt;
     text-align: center;
-    width: 20%;
-    padding: 12px 20px;
-    margin: 8px 0px;
+    width: 40%;
     box-sizing: border-box;
-    border: 3px solid rgb(53, 53, 42);
+    border: none;
+    border-bottom: 3px solid rgb(53, 53, 42);
     outline: none;
+    font-family: 'Noto Sans JP', sans-serif;
 }input[type=submit]:hover{
-    background-color: #e61;
+    background-color:var(--darkgreen);
+    color: #f5fffa;
+    cursor: pointer;
 }input[type=submit]:active{
     border-color:rgb(231, 225, 225) ;
 }
   /* /Anmeldeformular----------------------------------------------------*/
+
+
+  .modal {
+    display: none; /*Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 99; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    /* overflow: auto; Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    height: 40%;
+    width: 50%; /* Could be more or less, depending on screen size */
+  }
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
